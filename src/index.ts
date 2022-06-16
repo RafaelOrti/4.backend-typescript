@@ -8,13 +8,14 @@ app.use(express.json())//middleware que transforma la req.body a un json
 
 const PORT = 3000
 
+//ping server to check server status
 app.get('/ping', (_req, res) => {
     
     console.log('ping')
     res.send('pong')
 })
 
-
+//adding routes
 app.use('/api/diaries', diaryRouter)
 
 
